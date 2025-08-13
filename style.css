@@ -107,7 +107,7 @@ h2 {
 #hero .overlay {
     position: absolute;
     inset: 0;
-    background: var(--overlay-color);
+    background: var('_DSC3591.jpg');
     z-index: 1;
 }
 
