@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Obed Bel – Actor & Cineasta</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav id="navbar">
+            <div class="container nav-container">
+                <a href="#hero" class="logo">Obed&nbsp;Bel</a>
+            </div>
+        </nav>
+        <section id="gallery">
+            <div class="container">
+                <h2>Galería COMPLETA</h2>
+                <div class="pg-empty-placeholder"></div>
+                <h2>Galeria Completa</h2>
+                <p>Algunas imágenes seleccionadas de mis trabajos y sesiones fotográficas.</p>
+                <div class="gallery-grid">
+                    <img src="assets/_DSC3591.jpg" alt="Retrato de Obed Bel">
+                    <img src="assets/PHOTOS_Obed_Bel/DSC02977.jpg" alt="Retrato de Obed Bel">
+                    <img alt="Retrato de Obed Bel" width="100%" height="auto" src="assets/PHOTOS_Obed_Bel/DSC00634%20(1).jpg">
+                    <img src="assets/PHOTOS_Obed_Bel/IMG_20241009_204619.jpg" alt="Retrato de Obed Bel">
+                    <img src="assets/PHOTOS_Obed_Bel/_DSC4381.jpg" alt="Retrato de Obed Bel">
+                    <img src="assets/PHOTOS_Obed_Bel/IMG_20250212_210826_894.jpg" alt="Retrato de Obed Bel">
+                    <img src="assets/PHOTOS_Obed_Bel/SmartBG_2025-03-09_474b58b6-e2a4-4df0-b5a4-181899b200e2.jpg" alt="Retrato de Obed Bel">
+                    <img src="assets/PHOTOS_Obed_Bel/IMG_20250218_004514_659.JPG" alt="Retrato de Obed Bel">
+                    <img src="assets/PHOTOS_Obed_Bel/IMG_20241018_000257.jpg" alt="Retrato de Obed Bel">
+                    <img src="assets/PHOTOS_Obed_Bel/PSX_20241208_230929.jpg" alt="Retrato de Obed Bel">
+                    <img src="assets/PHOTOS_Obed_Bel/IMG_20241208_230531.jpg" alt="Retrato de Obed Bel">
+                    <img src="assets/PHOTOS_Obed_Bel/DSC04571.jpg" alt="Retrato de Obed Bel">
+                </div>
+                <a name="Ver mas fotos" href="#todas-las-fotos" class="btn-ver-mas">Ver màs Fotos</a>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container">
+                <h2>Contacto</h2>
+                <p>Estoy disponible para proyectos de actuación, dirección y colaboración artística.</p>
+                <p>Teléfono: <a href="tel:+527551271859">755-127-18-59</a> / <a href="tel:+525638975651">563-897-56-51</a></p>
+                <p>Email: <a href="mailto:obs.beltran.san@gmail.com">obs.beltran.san@gmail.com</a></p>
+                <p>Ubicación: Ixtapa-Zihuatanejo, Guerrero, México</p>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Obed Bel – Todos los derechos reservados.</p>
+            </div>
+        </footer>
+        <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+      anchor.addEventListener('click',function(e){
+        const href=this.getAttribute('href');
+        if(href.startsWith('#')){
+          e.preventDefault();
+          const target=document.querySelector(href);
+          if(target){window.scrollTo({top:target.offsetTop-60,behavior:'smooth'});}
+        }
+      });
+    });
+  </script>
+    </body>
+</html>

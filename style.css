@@ -1,0 +1,370 @@
+/* Estilos base cinematográficos */
+:root {
+    --bg-color: #0d0d0d;
+    --section-bg: #141414;
+    --primary-color: #d7263d;
+    --secondary-color: #f5f5f5;
+    --accent-color: #ffb400;
+    --overlay-color: rgba(0,0,0,.6);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins',sans-serif;
+    background: var(--bg-color);
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0 0 .5rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Navbar */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(13,13,13,.8);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,.05);
+}
+
+#navbar .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .8rem 0;
+}
+
+#navbar .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+#navbar .menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar .menu li a {
+    color: var(--secondary-color);
+    font-size: .9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding: .3rem 0;
+    text-decoration: none;
+}
+
+#navbar .menu li a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero */
+#hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url('assets/_DSC3591.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--secondary-color);
+}
+
+#hero .overlay {
+    position: absolute;
+    inset: 0;
+    background: var(--overlay-color);
+    z-index: 1;
+}
+
+#hero .content {
+    position: relative;
+    z-index: 2;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+#hero p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.button {
+    display: inline-block;
+    padding: .75rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: .9rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.button-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.button:hover {
+    background: var(--accent-color);
+    color: #000;
+}
+
+.button-secondary:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Secciones */
+section {
+    padding: 80px 0;
+    position: relative;
+}
+
+#about {
+    background: var(--section-bg);
+}
+
+#about .highlight {
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-top: 1rem;
+}
+
+#reel,
+#gallery,
+#social {
+    background: #0d0d0d;
+}
+
+#presentations,
+#resume,
+#contact,
+#shortfilm {
+    background: var(--section-bg);
+}
+
+/* Video wrappers */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,.6);
+    margin-top: 2rem;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.presentations-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.video-container {
+    flex: 1 1 350px;
+    max-width: 480px;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 270px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,.6);
+}
+
+.video-container h3 {
+    margin-top: .5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--accent-color);
+}
+
+/* Galería */
+.gallery-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    margin-top: 2rem;
+}
+
+/* ==== Ajuste imágenes de galería ==== */
+#gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+
+    /* no corta la imagen */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+/* ==== Botón "Ver más" ==== */
+.btn-ver-mas {
+    display: inline-block;
+    background-color: #00aaff;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.2s ease;
+}
+
+.btn-ver-mas:hover {
+    background-color: #0088cc;
+}
+
+/* CV */
+#resume .download-cv {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: .75rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#resume .download-cv:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* Social */
+#social .icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+#social .icons a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #1f1f1f;
+    transition: background .3s ease;
+}
+
+#social .icons a:hover {
+    background: var(--primary-color);
+}
+
+#social .icons img {
+    width: 26px;
+    height: 26px;
+    filter: invert(100%);
+}
+
+/* Contacto */
+<!-- Botón de WhatsApp --><div style="margin-top:15px;">  <a href="https://wa.me/527551271859" target="_blank"      style="display:inline-flex; align-items:center; background-color:#25D366; color:white; padding:12px 20px; font-size:16px; font-weight:bold; text-decoration:none; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.2);">     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"           alt="WhatsApp" style="width:20px; height:20px; margin-right:10px;">     Enviar mensaje por WhatsApp  </a></div>  </a></div>#contact a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #050505;
+    text-align: center;
+    padding: 1rem 0;
+    color: #777;
+    font-size: .8rem;
+}
+
+/* Responsive */
+@media (max-width:768px){
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    #navbar .menu {
+        display: none;
+    }
+}
+
+    
+    
+}
+
+}
